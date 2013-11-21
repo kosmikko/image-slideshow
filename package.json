@@ -1,0 +1,7 @@
+{
+  "name": "image-slideshow",
+  "version": "0.0.1",
+  "dependencies": {
+    "styl": "~0.2.6"
+  }
+}
