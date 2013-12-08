@@ -1,10 +1,14 @@
+/*
+usage:
+node bin/parse_slides.js --slidesFolder=slides
+*/
 var dir = require('node-dir');
 var yaml = require('js-yaml');
 var marked = require('marked');
 var argv = require('optimist').argv;
 var path = require('path');
 var utils = require('../lib/utils');
-var slidePath = path.join(__dirname, '../slides');
+var slidePath = path.join(__dirname, '../', argv.slidesFolder || 'slides-example');
 var slides = [];
 
 var parseContent = function(content) {
