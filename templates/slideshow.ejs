@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="container">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./responsive_image.css">
+    <link rel="stylesheet" href="./image_and_caption.css">
+    <link rel="stylesheet" href="./slideshow.css">
+  </head>
+  <body class="carousel">
+    <article>
+      <% slides.forEach(function(slide) { %>
+        <section>
+          <%- slide %>
+        </section>
+      <% }) %>
+    </article>
+  </body>
+  <script src="./slideshow.js"></script>
+</html>
