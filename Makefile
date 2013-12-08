@@ -11,7 +11,7 @@ JS = $(patsubst js/%.js, $(BUILD_DIR)/%.js, $(JS_SRC))
 
 COMPONENTS = components/necolas-normalize.css/normalize.css
 
-all: build-setup 3rdparty $(STYLES) $(JS)
+all: build-setup $(STYLES) $(JS)
 
 build-setup:
 	@mkdir -p $(BUILD_DIR)
@@ -33,3 +33,8 @@ watch:
 
 .PHONY: watch
 
+slideshow: 3rdparty
+	node bin/parse_slides.js --slidesFolder=slides
+	@mkdir -p $(BUILD_DIR)/img
+	rsync -rupE slides/img/ $(BUILD_DIR)/img/
+.PHONY: slideshow

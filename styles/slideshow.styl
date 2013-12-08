@@ -1,6 +1,7 @@
 body
   overflow-x: hidden
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
   color: #606060
 
 a
@@ -36,7 +37,8 @@ a
   bottom: 0
 
 h1
-  color: white
+  font-family: 'Libre Baskerville', serif
+  color: rgba(0,0,0,0.68)
 
 article
   position: absolute
@@ -67,13 +69,9 @@ section
 
 @media only screen and (max-width: 768px)
   body
-    font-size: 10px
+    font-size: 80%
   body, section.bespoke-slide
     transition: transform .7s ease, opacity .7s ease
-
-@media only screen and (max-width: 570px)
-  article
-    transform: scale(0.5) translateY(-27px)
 
 // carousel theme
 

@@ -25,12 +25,17 @@ var parseContent = function(content) {
   var header = match[4].trim();
   var body = content.substring(match[0].length).trim();
   var settings = yaml.load(header);
+  var extraClasses = [];
+  if(body.length < 600) extraClasses.push('short');
   var ctx = {
     title: settings.title,
     caption: marked(body),
-    image: settings.image
+    image: settings.image,
+    date: settings.date,
+    extraClasses: extraClasses
   };
-  slides.push(utils.renderTemplate('landscape', ctx));
+  console.log(settings.title, 'len:', body.length);
+  slides.push(utils.renderTemplate(settings.layout, ctx));
 };
 
 var readSlides = function(callback) {
