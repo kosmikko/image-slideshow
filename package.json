@@ -2,6 +2,8 @@
   "name": "image-slideshow",
   "version": "0.0.1",
   "dependencies": {
-    "styl": "~0.2.6"
+    "styl": "~0.2.6",
+    "bespoke": "~0.3.1",
+    "browserify": "~3.0.0"
   }
 }

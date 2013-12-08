@@ -1,0 +1,102 @@
+body
+  overflow-x: hidden
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+  color: #606060
+
+a
+  transition: color 1s ease
+  color: #a0a0a0
+  text-decoration: none
+
+.arrow
+  transition: background .1s ease
+  cursor: pointer
+  color: white
+  background: #808080
+  width: 15px
+  height: 15px
+  border-radius: 4px
+  text-align: center
+  font-weight: bold
+  line-height: 19px
+  overflow: hidden
+  position: absolute
+  top: 24px
+  &.up
+    left: -42px
+  &.down
+    transform: rotate(180deg)
+    left: -24px
+
+#main
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+h1
+  color: white
+
+article
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+
+body
+  transition: transform 0.7s ease, opacity 0.7s ease, background-color 0.7s ease
+
+section
+  transform: none
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  &.bespoke-slide
+    transition: transform 0.7s ease, opacity 0.7s ease, background-color 0.7s ease
+  &.bespoke-active
+    opacity: 1
+    z-index: 1
+  &.bespoke-inactive
+    pointer-events: none
+    z-index: 0
+
+@media only screen and (max-width: 768px)
+  body
+    font-size: 10px
+  body, section.bespoke-slide
+    transition: transform .7s ease, opacity .7s ease
+
+@media only screen and (max-width: 570px)
+  article
+    transform: scale(0.5) translateY(-27px)
+
+// carousel theme
+
+.carousel
+  background: rgba(255, 255, 0, 0.2)
+  section, .arrow:hover
+    background: rgb(255, 255, 255)
+  a
+    color: rgb(131, 199, 69)
+  section
+    &.bespoke-before
+      transform: translate3d(-300%, 0, 0)
+    &.bespoke-before-2
+      transform: translate3d(-200%, 0, 0)
+      opacity: 0.1
+    &.bespoke-before-1
+      transform: translate3d(-100%, 0, 0)
+      opacity: 0.3
+    &.bespoke-after
+      transform: translate3d(300%, 0, 0)
+    &.bespoke-after-1
+      transform: translate3d(100%, 0, 0)
+      opacity: 0.3
+    &.bespoke-after-2
+      transform: translate3d(200%, 0, 0)
+      opacity: 0.1
