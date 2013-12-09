@@ -1,4 +1,4 @@
-STYL_BIN=node_modules/styl/bin/styl
+STYL_BIN=node_modules/stylus/bin/stylus
 BROWSERIFY_BIN=node_modules/.bin/browserify
 
 BUILD_DIR = build
@@ -22,7 +22,7 @@ build-setup:
 
 $(BUILD_DIR)/%.css: styles/%.styl
 	@echo Creating $@ $<
-	$(STYL_BIN) -w < $< > $@
+	$(STYL_BIN) -u nib < $< > $@
 
 $(BUILD_DIR)/%.js: js/%.js
 	@echo Creating $@ $<

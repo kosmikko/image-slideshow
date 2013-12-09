@@ -55,7 +55,7 @@ var readSlides = function(callback) {
 
 var createSlideshow = function() {
   var slideshowTemplate = 'slideshow';
-  var slideshowTarget = path.join(__dirname, '../build/slideshow.html');
+  var slideshowTarget = path.join(__dirname, '../build/index.html');
   console.log('Creating slideshow to ', slideshowTarget);
   readSlides(function(err) {
     if(err) throw err;

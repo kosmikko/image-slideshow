@@ -1,3 +1,5 @@
+@import nib
+
 .container
   height: 100%
 
@@ -28,11 +30,11 @@
     height: auto
     &.caption
       width: 100%
-      order: 2
+      order(2)
     &.image
       width: 100%
       max-height: 80%
-      order: 1
+      order(1)
 
 .full-width
   width: 100%
@@ -58,7 +60,6 @@ h1
   .caption
     display: flex
     align-items: center
-
 
 @media all and (max-width: 800px)
   .flex, .flex.portrait
