@@ -37,4 +37,5 @@ slideshow: 3rdparty
 	node bin/parse_slides.js --slidesFolder=slides
 	@mkdir -p $(BUILD_DIR)/img
 	rsync -rupE slides/img/ $(BUILD_DIR)/img/
+	sips -Z 1900 $(BUILD_DIR)/img/*.jpg
 .PHONY: slideshow
